@@ -457,6 +457,12 @@ MonoBehaviour:
   bombFuseTime: 3
   bombAmount: 1
   bombsRemaining: 0
+  explosionPrefab: {fileID: 5129092706458807697, guid: 0810a7078ce4cae4692f60bf611665a2, type: 3}
+  explosionLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  explosionDuration: 1
+  explosionRadius: 1
 --- !u!1 &7076176752005306324
 GameObject:
   m_ObjectHideFlags: 0
