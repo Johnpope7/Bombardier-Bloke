@@ -19,6 +19,7 @@ public class MovementController : MonoBehaviour
     public AnimatedSpriteRenderer spriteRendererDown;
     public AnimatedSpriteRenderer spriteRendererLeft;
     public AnimatedSpriteRenderer spriteRendererRight;
+    public AnimatedSpriteRenderer spriteRendererDeath;
     private AnimatedSpriteRenderer activeSpriteRenderer;
     #endregion
     #region BuiltIn Functions
@@ -60,6 +61,14 @@ public class MovementController : MonoBehaviour
         RB2D.MovePosition(position + translation); //moves the rigidbody
     }
 
+    private void OnTriggerEnter2D(Collider2D other) //function to check if the player has hit an explosion
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion")) //if the player has hit an explosion
+        {
+            DeathSequence(); //play the death sequence
+        }
+    }
+
     #endregion
 
     #region Custom Functions
@@ -75,6 +84,19 @@ public class MovementController : MonoBehaviour
 
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = direction == Vector2.zero;
+    }
+
+    private void DeathSequence()
+    {
+        enabled = false; //disables movement
+        GetComponent<BombController>().enabled = false; //disables bombs
+
+        //sets all sprite renderers to false but the death anim sprite renderer
+        spriteRendererUp.enabled = false;
+        spriteRendererDown.enabled = false;
+        spriteRendererLeft.enabled = false;
+        spriteRendererRight.enabled = false;
+        spriteRendererDeath.enabled = true;
     }
     #endregion
 

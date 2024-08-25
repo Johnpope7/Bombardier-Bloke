@@ -37,7 +37,7 @@ public class ItemPickup : MonoBehaviour
         {
             OnItemPickup(other.gameObject);
         }
-        if (other.CompareTag("Explosion")) //detects if it gets exploded
+        else if (other.CompareTag("Explosion")) //detects if it gets exploded
         {
             Destroy(gameObject); //destroys if it gets hit by an explosion
         }

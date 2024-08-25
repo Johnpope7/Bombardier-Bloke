@@ -6,9 +6,10 @@ public class Destructibles : MonoBehaviour
 {
     #region Variables
     public float destructionTime = 1f; //this is how long it takes for the object to get destroyed
+
     [Range(0f, 1f)]
-    public float itemSpawnChance = 0.2f;
-    public GameObject[] spawnableItems;
+    public float itemSpawnChance = 0.2f; //spawn chance of items
+    public GameObject[] spawnableItems; //the items we can spawn
     #endregion
 
     #region BuiltIn Functions
