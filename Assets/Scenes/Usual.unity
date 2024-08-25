@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 414910339}
   - component: {fileID: 414910338}
   - component: {fileID: 414910340}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Indestructibles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2367,7 +2367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1210520736}
   - component: {fileID: 1210520735}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2415,7 +2415,7 @@ GameObject:
   - component: {fileID: 1534321383}
   - component: {fileID: 1534321382}
   - component: {fileID: 1534321384}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Destructibles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3446,6 +3446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerOne
       objectReference: {fileID: 0}
+    - target: {fileID: 8493190867438754073, guid: 8eebbfd8eba68b840b7887c096aa658e, type: 3}
+      propertyPath: destructibleTiles
+      value: 
+      objectReference: {fileID: 1534321383}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

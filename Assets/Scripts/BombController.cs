@@ -19,6 +19,10 @@ public class BombController : MonoBehaviour
     public float explosionDuration = 1f; //the duration of the explosions
     public int explosionRadius = 1; //how far the explosions go
 
+    [Header("Destructible")]
+    public Tilemap destructibleTiles; //holds the tilemap of the tiles we can destroy
+    public Destructibles destructiblePrefab; //holds the Prefab of the DestroyedBrick prefab
+
 
     #endregion
     #region BuiltIn Functions
@@ -82,9 +86,9 @@ public class BombController : MonoBehaviour
 
         position += direction; //gets the new positon of the explosion
 
-        if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask))
+        if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, explosionLayerMask)) //check so the bomb doesnt invade indestructible tiles
         {
-            //will clear bricks and stuff later
+            ClearDestructible(position); //destroys any destructible objects it hits
             return;
         }
 
@@ -95,6 +99,18 @@ public class BombController : MonoBehaviour
         explosion.DestroyAfter(explosionDuration); //determines the duration of the explosion
 
         Explode(position, direction, length - 1); //recursion but with one less length
+    }
+
+    private void ClearDestructible(Vector2 position)
+    {
+        Vector3Int cell = destructibleTiles.WorldToCell(position); //this gets the cells from the tilemap
+        TileBase tile = destructibleTiles.GetTile(cell); //this gets the actual tile from the position we just got
+
+        if (tile != null)
+        {
+            Instantiate(destructiblePrefab, position, Quaternion.identity); //if there is a tile we instantiate one of our exploding tile objects
+            destructibleTiles.SetTile(cell, null); //delete the current tile at that cell
+        }
     }
     #endregion
 }
