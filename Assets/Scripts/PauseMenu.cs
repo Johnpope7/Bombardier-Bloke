@@ -45,8 +45,8 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenuReturn() //returns to the main menu
     {
+        Time.timeScale = 1f; //plays the game at normal rate the game
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        //needs to unload Game scene
     }
 
     public void QuitGame() //quits the game when called
