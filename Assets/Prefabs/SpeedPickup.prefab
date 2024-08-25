@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6537164442461172682}
   - component: {fileID: 8380730224466917068}
   - component: {fileID: 7853977701842581869}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpeedPickup
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

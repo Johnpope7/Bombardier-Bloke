@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8769263965850996464}
   - component: {fileID: 3018674512184820656}
   - component: {fileID: 5434677084822471824}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DestroyedBrick
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

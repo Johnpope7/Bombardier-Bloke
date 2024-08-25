@@ -97,6 +97,13 @@ public class MovementController : MonoBehaviour
         spriteRendererLeft.enabled = false;
         spriteRendererRight.enabled = false;
         spriteRendererDeath.enabled = true;
+
+        Invoke(nameof(OnDeathSequenceEnded), 1.25f); //gives some time before deactivating the gameobject
+    }
+
+    private void OnDeathSequenceEnded()
+    {
+        gameObject.SetActive(false); //deactivates gameobject on death
     }
     #endregion
 
