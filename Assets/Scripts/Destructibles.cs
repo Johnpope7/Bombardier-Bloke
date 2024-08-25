@@ -19,7 +19,11 @@ public class Destructibles : MonoBehaviour
 
     private void OnDestroy()
     {
-
+        if (spawnableItems.Length > 0 && Random.value < itemSpawnChance) //gets a random spawned item
+        {
+            int randomIndex = Random.Range(0, spawnableItems.Length); //gets an item from the list
+            Instantiate(spawnableItems[randomIndex], transform.position, Quaternion.identity); //spawns it where the brick was destroyed
+        }
     }
     #endregion
 }

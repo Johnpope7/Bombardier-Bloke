@@ -112,5 +112,13 @@ public class BombController : MonoBehaviour
             destructibleTiles.SetTile(cell, null); //delete the current tile at that cell
         }
     }
+
+
+    public void AddBomb()
+    {
+        //adds bombs to both lists
+        bombAmount++;
+        bombsRemaining++;
+    }
     #endregion
 }
