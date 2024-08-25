@@ -8,6 +8,7 @@ TagManager:
   - Explosion
   - Item
   - Environment
+  - GameManager
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Explosion
   - Environment
   - Player
-  - 
+  - GameManager
   - Item
   - 
   - 

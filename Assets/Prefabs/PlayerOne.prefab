@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc591c19cbbe684faf4c958827b75e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputKey: 32
+  inputKey: 304
   bombPrefab: {fileID: 4829995271177199836, guid: e67504fabecc5954880679ea6c4c3f1d, type: 3}
   bombFuseTime: 3
   bombAmount: 1

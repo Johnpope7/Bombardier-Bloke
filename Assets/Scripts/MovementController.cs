@@ -104,6 +104,7 @@ public class MovementController : MonoBehaviour
     private void OnDeathSequenceEnded()
     {
         gameObject.SetActive(false); //deactivates gameobject on death
+        GameManager.Instance.CheckWinState(); //checks to see if someone is dead or alive
     }
     #endregion
 
