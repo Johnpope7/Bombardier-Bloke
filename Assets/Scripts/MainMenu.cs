@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame() //starts the game when called
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads the next scene in the build index
+        //needs to unload start screen
     }
 
     public void QuitGame() //quits the game when called
