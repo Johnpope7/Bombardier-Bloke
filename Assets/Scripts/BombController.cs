@@ -47,12 +47,11 @@ public class BombController : MonoBehaviour
         }
     }
     #endregion
-
     #region Custom Function
     private IEnumerator PlaceBomb() //determines what happens when a bomb is placed
     {
         Vector2 position = transform.position; //where the bomb is going to be dropped
-        //rounds the bombts position so that it always aligns with the grid
+        //rounds the bombs position so that it always aligns with the grid
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
 
@@ -60,6 +59,11 @@ public class BombController : MonoBehaviour
         bombsRemaining--; //decrements bombs
 
         yield return new WaitForSeconds(bombFuseTime); //the timer for the suspension of the coroutine
+
+        //rounds the bombs position so that it always aligns with the grid
+        position = bomb.transform.position;
+        position.x = Mathf.Round(position.x);
+        position.y = Mathf.Round(position.y);
 
         //sets the explosion wherever the bomb is
         ExplosionController explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
