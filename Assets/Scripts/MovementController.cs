@@ -70,7 +70,6 @@ public class MovementController : MonoBehaviour
     }
 
     #endregion
-
     #region Custom Functions
     private void SetDirection(Vector2 newDirection, AnimatedSpriteRenderer spriteRenderer)
     {

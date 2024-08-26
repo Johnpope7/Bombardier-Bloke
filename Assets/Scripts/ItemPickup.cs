@@ -2,6 +2,20 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
+    #region BuiltIn Functions
+    private void OnTriggerEnter2D(Collider2D other) //detects collision with a character
+    {
+        if (other.CompareTag("Player")) //detects to make sure its a player that grabs the item
+        {
+            OnItemPickup(other.gameObject);
+        }
+        else if (other.CompareTag("Explosion")) //detects if it gets exploded
+        {
+            Destroy(gameObject); //destroys if it gets hit by an explosion
+        }
+    }
+    #endregion
+    #region Custom Variable
     public enum ItemType //holds a list of all the item types
     {
         ExtraBomb,
@@ -30,16 +44,5 @@ public class ItemPickup : MonoBehaviour
 
         Destroy(gameObject); //destroys object after it does any of that
     }
-
-    private void OnTriggerEnter2D(Collider2D other) //detects collision with a character
-    {
-        if (other.CompareTag("Player")) //detects to make sure its a player that grabs the item
-        {
-            OnItemPickup(other.gameObject);
-        }
-        else if (other.CompareTag("Explosion")) //detects if it gets exploded
-        {
-            Destroy(gameObject); //destroys if it gets hit by an explosion
-        }
-    }
+    #endregion
 }
