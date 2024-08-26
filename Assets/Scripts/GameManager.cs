@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] players; //a list of players
     #endregion
-
     #region BuiltIn Functions
     private void Awake()
     {
@@ -36,7 +35,6 @@ public class GameManager : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player"); //finds all the players
     }
     #endregion
-
     #region Custom Functions
     public void CheckWinState()
     {

@@ -10,7 +10,6 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI; //holds reference to Pause UI
     #endregion
-
     #region BuiltIn Functions
     void Update()
     {
@@ -27,7 +26,6 @@ public class PauseMenu : MonoBehaviour
         }
     }
     #endregion
-
     #region Custom Functions
     public void Resume() //function for resuming the game
     {

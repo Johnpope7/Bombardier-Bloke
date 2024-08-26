@@ -8,7 +8,6 @@ public class ExplosionController : MonoBehaviour
     public AnimatedSpriteRenderer middle;
     public AnimatedSpriteRenderer end;
     #endregion
-
     #region Custom Functions
     public void SetActiveRenderer(AnimatedSpriteRenderer renderer) //by passing in the specific animations, this helps them get enabled
     {
